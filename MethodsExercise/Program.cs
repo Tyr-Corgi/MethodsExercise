@@ -1,10 +1,11 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Net.NetworkInformation;
 
 namespace MethodsExercise
 {
     public class Program
     {
-        static void Main(string[] args)
+        public static void Madlip()
         {
             Console.WriteLine("What is your first name?"); //Output
             var firstName = Console.ReadLine(); // Input
@@ -20,22 +21,47 @@ namespace MethodsExercise
 
             Console.WriteLine($"My name is {firstName} and my favroite food is {favoriteFood}, even though it has been linked to the extinction of the common {favoriteColor} {favoriteAnimal}.");
 
-            //end of assignment 1 
+            //end of Exercise 1
         }
-        static int Math(int num1,int num2)
+        static void Main(string[] args)
         {
-            Console.WriteLine("Type a number");
-           var test1 = int.Parse(Console.ReadLine());
+            Madlip();
 
-            Console.WriteLine("Type a 2nd number");
-           var test2 = int.Parse(Console.ReadLine());
+            Console.WriteLine(Add(74, 39));
 
+            var result = (5, 1);
+            Console.WriteLine($"The answer is: {result}");
 
-            Console.WriteLine(test1);
-            Console.WriteLine(test2);
+            Multiply();
+        }
+        public static int Add(int num1, int num2)
+        {
+            var answer = num1 + num2;
 
+            return answer;
+        }
 
+        public static int Subtract(int num1, int num2)
+        {
+            return num1 - num2;
+        }
+        
+        public static void Multiply()
+        {
+            Console.WriteLine("What is the 1st number you want to multiply?");
+            var num1 = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("What is the 2nd number?");
+            var num2 = int.Parse(Console.ReadLine());
+
+            var answer = num1 * num2;
+
+            Console.WriteLine($"The multiplication answer is: {answer}");
+        }
+        public static double Divide(double num1, int num2)
+        { 
+            return num1 / num2; 
+        }
         }
 
 
@@ -51,4 +77,4 @@ namespace MethodsExercise
 
 
     }
-}
+
